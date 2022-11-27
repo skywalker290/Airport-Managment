@@ -1,0 +1,15 @@
+delimeter $$
+create function f1()
+return int
+deterministic
+
+begin
+
+declare pep int default 0;
+
+select count(*) into pep from customer where salary>40000;
+
+return (pep);
+
+end $$
+
